@@ -29,7 +29,7 @@ Kirby::plugin('robprouse/new-curator', [
                   'replyTo' => 'rob@prou.se',
                   'to' => $user->email(),
                   'subject' => 'Popup invite',
-                  'template' => 'user-specific',
+                  'template' => 'email-invite',
                   'data' => [
                       'user' => $user
                   ]
