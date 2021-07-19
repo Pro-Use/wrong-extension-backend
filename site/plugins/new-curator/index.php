@@ -29,7 +29,10 @@ Kirby::plugin('robprouse/new-curator', [
                   'replyTo' => 'rob@prou.se',
                   'to' => $user->email(),
                   'subject' => 'Popup invite',
-                  'body'=> 'You have been invited... blah, blah, blah',
+                  'template' => 'user-specific',
+                  'data' => [
+                      'user' => $user
+                  ]
                 ]);
               } catch (Exception $error) {
                 echo $error;
