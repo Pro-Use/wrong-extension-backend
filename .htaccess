@@ -15,12 +15,12 @@ RewriteEngine on
 # If your homepage is http://yourdomain.com/mysite,
 # set the RewriteBase to:
 #
-# RewriteBase /mysite
+RewriteBase /wrong
 
 # In some environments it's necessary to
 # set the RewriteBase to:
 #
-# RewriteBase /
+#RewriteBase /
 
 # block files and folders beginning with a dot, such as .git
 # except for the .well-known folder, which is used for Let's Encrypt and security.txt
