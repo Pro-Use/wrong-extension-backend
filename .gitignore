@@ -3,6 +3,7 @@
 
 Icon
 .DS_Store
+.htaccess
 
 # Temporary files
 # ---------------
