@@ -31,7 +31,8 @@ Kirby::plugin('robprouse/new-curator', [
                   'subject' => 'Popup invite',
                   'template' => 'email-invite',
                   'data' => [
-                      'user' => $user
+                      'user' => $user,
+                      'url' => $site->url()
                   ]
                 ]);
               } catch (Exception $error) {

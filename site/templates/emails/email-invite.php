@@ -4,7 +4,7 @@ You have been invited to submit popups to the Arebyte/Wrong Biennale browser ext
 
 To add popups, go to the dashboard:
 
-<?= $site->url()?>/panel
+<?= $url?>/panel
 
 and log in with the following credentials:
 
