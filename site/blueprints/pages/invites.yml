@@ -1,5 +1,20 @@
-title: Default Page
-preset: page
-fields:
-  blocks:
-    type: blocks
+title: Invites
+preset: pages
+icon: ?open
+
+options:
+  url: false
+  status: false
+  delete: false
+
+drafts:
+  extends: sections/invites
+  headline: Unpublished popup set
+  
+unlisted:
+  extends: sections/invites
+  headline: Unlisted popup set
+
+listed:
+  extends: sections/invites
+  headline: Published popup set

@@ -1,0 +1,33 @@
+title: curator
+permissions:
+  access:
+    panel: true
+    site: true
+    settings: false
+    users: false
+  files: false
+
+  languages: false
+  pages:
+    changeSlug: false
+    changeStatus: false
+    changeTemplate: false
+    changeTitle: true
+    create: false
+    delete: false
+    duplicate: false
+    preview: true
+    read: true
+    sort: false
+    update: true
+  site: false
+  user: false
+  users: false
+
+fields:
+  canaccess:
+    label: 'User Popups:'
+    type: pages
+    multiple: false 
+    default: site.find('invites')
+    search: false

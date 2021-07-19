@@ -1,5 +1,23 @@
-title: Default Page
-preset: page
+title: Popups
+templates: popup
+icon: open
+
+options:
+  url: false
+
 fields:
-  blocks:
-    type: blocks
+    from:
+      label: Start
+      type: date
+      width: 1/2
+      required: true
+    to:
+      label: End
+      type: date
+      width: 1/2
+      required: true
+      
+    popups:
+        extends: fields/popups
+        label: Popups
+

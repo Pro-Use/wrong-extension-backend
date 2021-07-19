@@ -1,0 +1,47 @@
+
+label: Popups
+type: structure
+fields:
+  url:
+    label: Content
+    type: url
+    width: 1/6
+    required: true
+  fullscreen:
+    label: Fullscreen
+    type: toggle
+    width: 1/6
+  width:
+    label: Popup width
+    type: number
+    width: 1/6
+    when:
+        fullscreen: false
+  height:
+    label: Popup height
+    type: number
+    width: 1/6
+    when:
+        fullscreen: false
+  position:
+    label: Popup position
+    type: select
+    options:
+        top-left: Top left
+        top-center: Top center
+        top-right: Top Right
+        mid-left: Center left
+        mid-center: Center
+        mid-right: Center Right
+        bottom-left: Bottom left
+        bottom-center: Bottom center
+        bottom-right: Bottom Right      
+    width: 1/6
+    when:
+        fullscreen: false
+  time:
+      label: Popup time
+      type: time
+      required: true
+      width: 1/6
+      

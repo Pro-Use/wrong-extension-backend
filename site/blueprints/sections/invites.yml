@@ -1,0 +1,5 @@
+type: pages
+headline: Popups
+parent: site.find("invites")
+sortBy: from desc
+empty: No popups yet

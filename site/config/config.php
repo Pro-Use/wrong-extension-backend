@@ -25,5 +25,16 @@ return [
         ]
       ]
     ]
-  ]
+  ],
+  'panel' =>[
+    'install' => true
+  ],
+          
+//  Restrict Access
+  'sylvainjule.bouncer.list' => [
+     'curator' => [
+         'fieldname' => 'canaccess'
+      ]
+    ],
+   'debug'  => true,
 ];
