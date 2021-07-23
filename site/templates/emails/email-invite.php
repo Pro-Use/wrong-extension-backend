@@ -9,6 +9,7 @@ To add popups, go to the dashboard:
 and log in with the following credentials:
 
 User: <?= $user->email() ?>
+
 Password: <?= $user->password() ?>
 
 Enjoy
