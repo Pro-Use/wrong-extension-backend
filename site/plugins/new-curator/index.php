@@ -28,9 +28,7 @@ Kirby::plugin('robprouse/new-curator', [
             
             // gen new password
             $newPW = str::random(8);
-            $site->user($user)->update(array(
-                'password' => $newPW
-            ));
+            $user->changePassword($newPW);
             
             //email user
             try {
