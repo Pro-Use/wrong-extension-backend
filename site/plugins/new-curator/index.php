@@ -49,6 +49,11 @@ Kirby::plugin('robprouse/new-curator', [
                 error_log($error, 0);
               }
           }
+          else if ($user->role()->id() === "extension-admin") {
+              $user->update([
+                'canaccess' => "- invites"
+                ]);
+          }
         }
       ],
 ]);
