@@ -34,6 +34,9 @@ return [
   'sylvainjule.bouncer.list' => [
      'curator' => [
          'fieldname' => 'canaccess'
+      ],
+      'extension-admin' => [
+         'fieldname' => 'canaccess'
       ]
     ],
    'debug'  => true,
