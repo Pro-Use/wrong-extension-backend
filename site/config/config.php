@@ -35,9 +35,6 @@ return [
      'curator' => [
          'fieldname' => 'canaccess'
       ],
-      'extension-admin' => [
-         'fieldname' => 'canaccess'
-      ]
     ],
    'debug'  => true,
 ];

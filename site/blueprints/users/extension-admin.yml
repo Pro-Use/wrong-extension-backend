@@ -3,7 +3,7 @@ permissions:
   access:
     panel: true
     site: true
-    settings: true
+    settings: false
     users: true
   files:
     create: true
@@ -47,11 +47,3 @@ permissions:
     create: true
     delete: true
     update: true
-    
-  fields:
-  canaccess:
-    label: 'User Popups:'
-    type: pages
-    multiple: false 
-    default: site.find('invites')
-    search: false
