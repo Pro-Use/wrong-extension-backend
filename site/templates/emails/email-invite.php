@@ -10,6 +10,6 @@ and log in with the following credentials:
 
 User: <?= $user->email() ?>
 
-Password: <?= $user->password() ?>
+Password: <?= $pwd ?>
 
 Enjoy

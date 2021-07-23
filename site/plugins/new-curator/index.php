@@ -11,18 +11,28 @@ Kirby::plugin('robprouse/new-curator', [
                 'title' => $user->name(),
                 'text'  => $user->id(),
                 ];
-
+            
             $page->createChild([
               'content'  => $content,
               'slug'     => $user->id(),
               'template' => 'invite',
               'isDraft' => false
             ]);
+            
+            // restrict access to new page
             $page_path = "- invites/" . strtolower($user->id());
             $user->update([
                 'role'=>'curator',
                 'canaccess' => $page_path
                 ]);
+            
+            // gen new password
+            $newPW = str::random(8);
+            $site->user($user)->update(array(
+                'password' => $newPW
+            ));
+            
+            //email user
             try {
                 $this->email([
                   'from' => 'rob@prou.se',
@@ -32,6 +42,7 @@ Kirby::plugin('robprouse/new-curator', [
                   'template' => 'email-invite',
                   'data' => [
                       'user' => $user,
+                      'pwd' => $newPW,
                       'url' => $site->url()
                   ]
                 ]);
