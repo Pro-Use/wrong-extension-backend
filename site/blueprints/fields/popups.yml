@@ -51,8 +51,8 @@ fields:
       width: 1/6
       min: page.from
       max: page.to
-  test:
-      label: debug
-      type: text
-      default: page.from.toDate('d-m-Y')
+  info: 
+      label: Info
+      type: info
+      text: "{{ page.from.toDate('d.m.Y') }}"
       
