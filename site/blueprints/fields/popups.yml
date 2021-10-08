@@ -49,10 +49,9 @@ fields:
       type: date
       required: false
       width: 1/6
-      min: page.from
-      max: page.to
+      min: page.from.toDate('Y-m-d')
+      max: page.to.toDate('Y-m-d')
   info: 
       label: Info
       type: info
-      text: "{{ page.from.toDate('d.m.Y') }}"
-      
+      text: "Instructions"
