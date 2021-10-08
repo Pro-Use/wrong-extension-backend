@@ -49,7 +49,7 @@ fields:
       type: date
       required: false
       width: 1/7
-      help: "Must be a date between {{ page.from.toDate('d.m.Y') }} and {{ page.to.toDate('d.m.Y') }}"
+      help: "Must be a date between {{ page.from.toDate('Y-m-d') }} and {{ page.to.toDate('y-m-d') }}"
 
   info: 
       label: Info
