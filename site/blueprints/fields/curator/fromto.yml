@@ -1,0 +1,14 @@
+type: group
+label: dates
+fields:
+    from:
+      label: Start
+      type: date
+      width: 1/2
+      disabled: true
+      disabled: false
+    to:
+      label: End
+      type: date
+      width: 1/2
+      disabled: true
