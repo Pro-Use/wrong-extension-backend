@@ -1,3 +1,4 @@
+label: dates
 fields:
     from:
       label: Start
