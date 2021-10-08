@@ -18,7 +18,7 @@ fields:
       width: 1/2
       required: true
     popup-set-text:
-        label: Popup set info
+        label: "Text for popup group:"
         type: textarea
         buttons: false
     popups:
