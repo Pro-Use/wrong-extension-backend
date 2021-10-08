@@ -17,7 +17,7 @@ fields:
       type: date
       width: 1/2
       required: true
-    info: "{{ page.from.toDate('d.m.Y') }}"
+    info: "test"
     popups:
         extends: fields/popups
         label: Popups
