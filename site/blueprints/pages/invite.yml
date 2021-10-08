@@ -6,17 +6,9 @@ options:
   url: false
 
 fields:
-    from:
-      label: Start
-      type: date
-      width: 1/2
-      required: true
-      disabled: false
-    to:
-      label: End
-      type: date
-      width: 1/2
-      required: true
+    dates:
+        extends: fields/fromto
+        label: From/To
     popup-set-text:
         label: "Text for popup group:"
         type: textarea
