@@ -1,11 +1,14 @@
-#from:
-label: Start
-type: date
-width: 1/2
-required: true
-disabled: false
-#to:
-#  label: End
-#  type: date
-#  width: 1/2
-#  required: true
+type: group
+label: dates
+fields:
+    from:
+      label: Start
+      type: date
+      width: 1/2
+      required: true
+      disabled: false
+    to:
+      label: End
+      type: date
+      width: 1/2
+      required: true
