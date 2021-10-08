@@ -53,6 +53,8 @@ fields:
       type: date
       required: false
       width: 1/7
+      min: "{{ page.from.toDate('Y-m-d') }}"
+      max: "{{ page.to.toDate('y-m-d') }}"
       help: "Must be a date between {{ page.from.toDate('Y-m-d') }} and {{ page.to.toDate('y-m-d') }}"
 
   info: 
