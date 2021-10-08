@@ -6,7 +6,7 @@ options:
   url: false
 
 fields:
-    fromto:
+    fromtok:
         extends: fields/fromto
         label: From/To
     popup-set-text:
