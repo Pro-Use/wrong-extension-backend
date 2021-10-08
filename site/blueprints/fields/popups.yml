@@ -54,5 +54,5 @@ fields:
   test:
       label: debug
       type: text
-      default: page.from
+      default: page.from.toDate('d.m.Y')
       
