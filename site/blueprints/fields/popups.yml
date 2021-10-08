@@ -45,8 +45,10 @@ fields:
       required: true
       width: 1/6
   date:
-      label: Popup date (leave blank for every day)
+      label: Popup date\n (leave blank for every day)
       type: date
       required: false
       width: 1/6
+      min: page.from
+      max: page.to
       
