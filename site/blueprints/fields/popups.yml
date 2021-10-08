@@ -5,22 +5,22 @@ fields:
   url:
     label: Content
     type: url
-    width: 1/6
+    width: 1/7
     required: true
   fullscreen:
     label: Fullscreen
     type: toggle
-    width: 1/6
+    width: 1/7
   width:
     label: Popup width
     type: number
-    width: 1/6
+    width: 1/7
     when:
         fullscreen: false
   height:
     label: Popup height
     type: number
-    width: 1/6
+    width: 1/7
     when:
         fullscreen: false
   position:
@@ -36,21 +36,21 @@ fields:
         bottom-left: Bottom left
         bottom-center: Bottom center
         bottom-right: Bottom Right      
-    width: 1/6
+    width: 1/7
     when:
         fullscreen: false
   time:
       label: Popup time
       type: time
       required: true
-      width: 1/6
+      width: 1/7
   date:
-      label: Popup date\n (leave blank for every day)
+      label: Popup date (leave blank for every day)
       type: date
       required: false
-      width: 1/6
-      min: page.from.toDate('Y-m-d')
-      max: page.to.toDate('Y-m-d')
+      width: 1/7
+      help: "Must be a date between {{ page.from.toDate('d.m.Y') }} and {{ page.to.toDate('d.m.Y') }}"
+
   info: 
       label: Info
       type: info
