@@ -2,6 +2,10 @@
 label: Popups
 type: structure
 fields:
+  popup-text:
+    label: "Popup text"
+    type: textarea
+    buttons: false
   url:
     label: Content
     type: url
