@@ -6,7 +6,6 @@ fields:
       type: date
       width: 1/2
       disabled: true
-      disabled: false
     to:
       label: End
       type: date
