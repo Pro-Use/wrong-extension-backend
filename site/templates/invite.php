@@ -10,6 +10,7 @@
     $popups = $page->popups()->toStructure();
     $win_id = 0;
     foreach($popups as $popup) {?>
+    date = <?= $popup->date()?>
   <input type="button" value="<?=(string)$popup->url()?>"
             data-fs="<?=(string)$popup->fullscreen()?>"
             data-width="<?=(string)$popup->width()?>"
