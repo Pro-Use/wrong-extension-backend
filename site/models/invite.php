@@ -4,7 +4,7 @@ class InvitePage extends Page
 {
     public function invalidDate() {
 //        $popups = $this->popups()->toStructure();
-//        $errors = false;
+        $errors = false;
 //        $f_timestamp = $this->from()->toDate();
 //        $t_timestamp = $this->to()->toDate();
 //        foreach($popups as $popup) {
@@ -17,6 +17,6 @@ class InvitePage extends Page
 //                }
 //            }
 //        }
-        return "false";
+        return $errors;
     }
 }
