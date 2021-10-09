@@ -36,7 +36,7 @@ foreach($data as $article) {
       'from'=> (string)$article->from(),
       'to' => (string)$article->to(),
       'popups'   => $popups_json,
-      'invalidDate' =>$article->invalidDate()->toBool(),
+      'invalidDate' =>$article->invalidDate(),
 
     ];
   }
