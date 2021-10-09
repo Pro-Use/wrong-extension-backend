@@ -23,5 +23,5 @@ fields:
     dateError: 
         label: Invalid popup date(s)
         type: info
-        text: {{ page.invalidDate }}
+        text: page.invalidDate
 
