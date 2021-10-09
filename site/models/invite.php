@@ -17,6 +17,6 @@ class InvitePage extends Page
 //                }
 //            }
 //        }
-        return $errors;
+        return (string)$errors;
     }
 }
