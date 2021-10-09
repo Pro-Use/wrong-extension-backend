@@ -1,7 +1,10 @@
 <?php
 
 
-$data = $page->children()->published()->flip();
+$data = $page->children()
+    ->filter(function ($child) {
+    return $child->status() != draft;
+  });
 $json = [];
 $now = new DateTime("now");
 
