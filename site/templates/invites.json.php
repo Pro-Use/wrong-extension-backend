@@ -3,7 +3,7 @@
 
 $data = $page->children()
     ->filter(function ($child) {
-    return $child->status() != draft;
+    return $child->status() != 'draft';
   });
 $json = [];
 $now = new DateTime("now");
