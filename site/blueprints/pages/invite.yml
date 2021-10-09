@@ -9,7 +9,7 @@ fields:
     fromto:
         extends: fields/fromto
         label: From/To
-    popup-set-text:
+    popupSetText:
         label: "Text for popup group:"
         type: textarea
         buttons: false
@@ -20,4 +20,8 @@ fields:
         label: Info
         type: info
         text: "instructions"
+    dateError: 
+        label: Invalid popup date(s)
+        type: info
+        text: {{ page.invalidDate }}
 
