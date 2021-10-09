@@ -5,8 +5,9 @@ $data = $page->children()
     ->filter(function ($child) {
     return $child->status() != 'draft';
   });
-$json = [];
+
 $now = new DateTime("now");
+$json = ['updated' => (string)$now];
 
 foreach($data as $article) {
     
