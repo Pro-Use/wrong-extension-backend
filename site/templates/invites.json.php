@@ -7,7 +7,7 @@ $data = $page->children()
   });
 
 $now = new DateTime("now");
-$json = ['updated' => (string)$now];
+$json = [];
 
 foreach($data as $article) {
     
@@ -26,7 +26,8 @@ foreach($data as $article) {
             'width' => (string)$popup->width(),
             'height' => (string)$popup->height(),
             'position' => (string)$popup->position(),
-            'time' => (string)$popup->time()
+            'time' => (string)$popup->time(),
+            'date' => (string)$popup->date()
         ];
     }
 
