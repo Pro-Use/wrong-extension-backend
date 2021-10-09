@@ -4,6 +4,7 @@
 
 </head>
 <body>
+  <?=$page->invalidDate() ?>
   <h1><?= $page->title() ?></h1>
   <?php
     $popups = $page->popups()->toStructure();
