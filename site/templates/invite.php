@@ -4,13 +4,11 @@
 
 </head>
 <body>
-  <?=$page->invalidDate() ?>
   <h1><?= $page->title() ?></h1>
   <?php
     $popups = $page->popups()->toStructure();
     $win_id = 0;
     foreach($popups as $popup) {?>
-    date = <?php var_dump($popup->date())?>
   <input type="button" value="<?=(string)$popup->url()?>"
             data-fs="<?=(string)$popup->fullscreen()?>"
             data-width="<?=(string)$popup->width()?>"
