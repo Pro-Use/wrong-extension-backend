@@ -2,9 +2,9 @@
 
 Kirby::plugin('robprouse/validate-popups', [ 
     'hooks' => [
-        'page.update:after' => function ($newPage) {
-            $site = $this->site();
-            $page = $site->pages()->findById($newPage->id());
+        'page.update:before' => function ($page) {
+//            $site = $this->site();
+//            $page = $site->pages()->findById($newPage->id());
             $popups = $page->popups()->toStructure();
             $errors = 'false';
             $f_timestamp = $page->from()->toDate();
