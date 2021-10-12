@@ -23,13 +23,10 @@ fields:
     dateError:
       type: hidden
       default: 0
-    test:
-        label: test
-        type: text
     dateErrorText: 
         label: Invalid popup date(s)
         type: info
         text: "{{ page.invalidDate }}"
         when:
-            dateError: 1
+            dateError: 'true'
 
