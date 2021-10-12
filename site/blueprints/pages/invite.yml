@@ -28,4 +28,6 @@ fields:
         label: Invalid popup date(s)
         type: info
         text: "{{ page.invalidDate }}"
+        when:
+            dateError: true
 
