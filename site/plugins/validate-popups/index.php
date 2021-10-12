@@ -2,7 +2,7 @@
 
 Kirby::plugin('robprouse/validate-popups', [ 
     'hooks' => [
-        'page.update:before' => function ($page) {
+        'page.update:before' => function ($page, $values, $strings) {
 //            $site = $this->site();
 //            $page = $site->pages()->findById($newPage->id());
             $popups = $page->popups()->toStructure();
@@ -19,7 +19,8 @@ Kirby::plugin('robprouse/validate-popups', [
                     }
                 }
             }
-            $page->update(['info'=>$errors]);
+//            $page->update(['info'=>$errors]);
+            $page->update(['info'=>'test']);
         }
       ],
 ]);
