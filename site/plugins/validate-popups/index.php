@@ -19,8 +19,8 @@ Kirby::plugin('robprouse/validate-popups', [
                     }
                 }
             }
-//            $page->update(['info'=>$errors]);
-            $page->update(['test'=>'testing']);
+            $page->update(['dateError'=>$errors]);
+//            $page->update(['test'=>'testing']);
         }
       ],
 ]);
