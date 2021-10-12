@@ -22,7 +22,7 @@ fields:
         text: "instructions {{page.dateError.value}}"          
     dateError:
       type: hidden
-      default: 0
+      text: "{{ page.invalidDate }}"
     dateErrorText: 
         label: Invalid popup date(s)
         type: info
