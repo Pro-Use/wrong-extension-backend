@@ -23,6 +23,9 @@ fields:
     dateError:
       type: hidden
       default: 'false'
+    test:
+        label: test
+        type: text
     dateErrorText: 
         label: Invalid popup date(s)
         type: info
