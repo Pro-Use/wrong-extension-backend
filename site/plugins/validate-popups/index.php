@@ -6,7 +6,7 @@ Kirby::plugin('robprouse/validate-popups', [
             $site = $this->site();
             $page = $site->pages()->findById($newPage->id());
             $popups = $page->popups()->toStructure();
-            $errors = false;
+            $errors = 'false';
             $f_timestamp = $page->from()->toDate();
             $t_timestamp = $page->to()->toDate();
             foreach($popups as $popup) {
@@ -14,7 +14,7 @@ Kirby::plugin('robprouse/validate-popups', [
                     $p_timestamp = $popup->date()->toDate();
                     if ( $p_timestamp < $f_timestamp ||
                             $p_timestamp > $t_timestamp) {
-                        $errors = true;
+                        $errors = 'true';
                         break;
                     }
                 }
