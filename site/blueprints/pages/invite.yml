@@ -22,7 +22,7 @@ fields:
         text: "instructions {{page.dateError.value}}"          
     dateError:
       type: hidden
-      default: 'false'
+      default: 0
     test:
         label: test
         type: text
@@ -31,5 +31,5 @@ fields:
         type: info
         text: "{{ page.invalidDate }}"
         when:
-            dateError: true
+            dateError: 1
 
