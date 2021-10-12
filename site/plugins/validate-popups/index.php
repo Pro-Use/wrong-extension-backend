@@ -20,7 +20,7 @@ Kirby::plugin('robprouse/validate-popups', [
                 }
             }
 //            $page->update(['info'=>$errors]);
-            $page->update(['info'=>'test']);
+            $page->update(['test'=>'testing']);
         }
       ],
 ]);
