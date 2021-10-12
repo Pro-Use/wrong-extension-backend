@@ -5,10 +5,10 @@ Kirby::plugin('robprouse/validate-popups', [
         'page.update:after' => function ($newPage) {
             $site = $this->site();
             $page = $site->pages()->findById($newPage->id());
-            $popups = $newPage->popups()->toStructure();
+            $popups = $page->popups()->toStructure();
             $errors = 'false';
-            $f_timestamp = $newPage->from()->toDate();
-            $t_timestamp = $newPage->to()->toDate();
+            $f_timestamp = $page->from()->toDate();
+            $t_timestamp = $page->to()->toDate();
             foreach($popups as $popup) {
                 if ($popup->date() != ""){
                     $p_timestamp = $popup->date()->toDate();
