@@ -19,8 +19,12 @@ fields:
     info: 
         label: Info
         type: info
-        text: "instructions"
-    dateError: 
+        text: "instructions"          
+    dateError:
+      label: Date Error
+      type: toggle
+      default: false
+    dateErrorText: 
         label: Invalid popup date(s)
         type: info
         text: "{{ page.invalidDate }}"
