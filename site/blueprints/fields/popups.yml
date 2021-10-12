@@ -54,6 +54,11 @@ fields:
       required: false
       width: 1/7
       help: "Must be a date between {{ page.from.toDate('Y-m-d') }} and {{ page.to.toDate('Y-m-d') }}"
+      
+  dateError:
+      label: Date Error
+      type: toggle
+      default: false
 
   info: 
       label: Info
