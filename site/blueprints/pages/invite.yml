@@ -19,7 +19,7 @@ fields:
     info: 
         label: Info
         type: info
-        text: "instructions"          
+        text: "instructions {{page.dateError.value}}"          
     dateError:
       type: hidden
       default: 'false'
