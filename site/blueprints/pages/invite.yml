@@ -19,14 +19,14 @@ fields:
     info: 
         label: Info
         type: info
-        text: "instructions {{page.dateError.value}}"          
+        text: "instructions {{page.dateError.value}} = {{ page.invalidDate }}"          
     dateError:
       type: hidden
-      text: "{{ page.invalidDate }}"
+      default: 'true'
     dateErrorText: 
         label: Invalid popup date(s)
         type: info
         text: "{{ page.invalidDate }}"
         when:
-            dateError: 'true'
+            dateError: page.invalidDate
 
