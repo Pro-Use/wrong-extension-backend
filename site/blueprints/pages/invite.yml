@@ -28,5 +28,5 @@ fields:
         type: info
         text: "{{ page.invalidDate }}"
         when:
-            dateError: page.invalidDate
+            dateError: "{{ page.invalidDate }}"
 
