@@ -18,18 +18,21 @@ fields:
   width:
     label: Popup width
     type: number
+    required: true
     width: 1/7
     when:
         fullscreen: false
   height:
     label: Popup height
     type: number
+    required: true
     width: 1/7
     when:
         fullscreen: false
   position:
     label: Popup position
     type: select
+    required: true
     options:
         top-left: Top left
         top-center: Top center
@@ -50,15 +53,17 @@ fields:
       width: 1/7
   date:
       label: Popup date (leave blank for every day)
-      type: date
-      required: false
+      type: multiselect
+      options: query
+      query: page.returnDates
       width: 1/7
-      help: "Must be a date between {{ page.from.toDate('Y-m-d') }} and {{ page.to.toDate('Y-m-d') }}"
+      # help: "Must be a date between {{ page.from.toDate('Y-m-d') }} and {{ page.to.toDate('Y-m-d') }}"
   info: 
       label: Info
       type: info
       text: "Instructions"
-<<<<<<< HEAD
-=======
-      
->>>>>>> c174d14cdc427035b199591ade2e58d6882833c4
+  errors:
+      label: 'errors'
+      type: text
+      # theme: negative
+      text: " "
