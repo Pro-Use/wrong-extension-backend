@@ -1,3 +1,6 @@
 [submodule "site/plugins/bouncer"]
 	path = site/plugins/bouncer
 	url = https://github.com/sylvainjule/kirby-bouncer.git
+[submodule "site/plugins/kirby-structure-id"]
+	path = site/plugins/kirby-structure-id
+	url = https://github.com/texnixe/kirby-structure-id.git

@@ -50,6 +50,9 @@ fields:
       label: Popup time
       type: time
       required: true
+      step:
+        unit: minute
+        size: 1
       width: 1/7
   date:
       label: Popup date (leave blank for every day)

@@ -7,7 +7,7 @@ $data = $page->children()
   });
 
 $now = new DateTime("now");
-$json = [];
+$popups_json = [];
 
 foreach($data as $article) {
     
@@ -17,10 +17,10 @@ foreach($data as $article) {
   if ($from<= $now && $now <= $to){
       
     $popups = $article->popups()->toStructure();
-    $popups_json = [];
+    $popup_json = [];
 
     foreach($popups as $popup) {
-        $popups_json[] = [
+        $popup_json[] = [
             'url' => (string)$popup->url(),
             'fullscreen' => (string)$popup->fullscreen(),
             'width' => (string)$popup->width(),
@@ -31,16 +31,17 @@ foreach($data as $article) {
         ];
     }
 
-    $json[] = [
+    $popups_json[] = [
       'title' => (string)$article->title(), 
       'from'=> (string)$article->from(),
       'to' => (string)$article->to(),
-      'popups'   => $popups_json,
-      'invalidDate' =>$article->invalidDate(),
-
+      'popups'   => $popup_json,
     ];
   }
 }
+
+$json = ['lastUpdate' => $page->lastUpdated(),
+         'popups' => $popups_json];
 
 echo json_encode($json);
 
