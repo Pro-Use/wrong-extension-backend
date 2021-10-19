@@ -37,6 +37,13 @@ return [
             $now = new DateTime("now");
             $page->update(['lastUpdated' => $now->getTimestamp()]);
         }
+      },
+      'page.update:after' => function ($newPage, $oldPage) {
+        if ($newPage->status() != 'draft'&& $newPage->isChildOf('invites')){
+            $page = $this->site()->find('invites');
+            $now = new DateTime("now");
+            $page->update(['lastUpdated' => $now->getTimestamp()]);
+        }
       }
   ],
           
