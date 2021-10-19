@@ -21,13 +21,13 @@ foreach($data as $article) {
 
     foreach($popups as $popup) {
         $popup_json[] = [
-            'url' => (string)$popup->url(),
+            'url' => $popup->url(),
             'fullscreen' => (string)$popup->fullscreen(),
             'width' => (string)$popup->width(),
             'height' => (string)$popup->height(),
             'position' => (string)$popup->position(),
             'time' => (string)$popup->time(),
-            'date' => (string)$popup->date()
+            'date' => (string)$popup->date(),
         ];
     }
 
