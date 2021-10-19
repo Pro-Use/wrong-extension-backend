@@ -35,7 +35,7 @@ return [
         if ($newPage->status() != 'draft'&& $newPage->isChildOf('invites')){
             $page = $this->site()->find('invites');
             $now = new DateTime("now");
-            $page->update(['lastUpadted' => $now->getTimestamp()]);
+            $page->update(['lastUpdated' => $now->getTimestamp()]);
         }
       }
   ],
