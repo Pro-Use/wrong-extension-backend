@@ -10,7 +10,7 @@ fields:
         extends: fields/fromto
         label: From/To
     popupSetText:
-        label: "Text for popup group:"
+        label: "Info for popup group:"
         type: textarea
         buttons: false
     popups:

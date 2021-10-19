@@ -3,7 +3,7 @@ label: Popups
 type: structure
 fields:
   popup-text:
-    label: "Popup text"
+    label: "Popup info"
     type: textarea
     buttons: false
   url:
@@ -62,8 +62,3 @@ fields:
       label: Info
       type: info
       text: "Instructions"
-  errors:
-      label: 'errors'
-      type: text
-      # theme: negative
-      text: " "
