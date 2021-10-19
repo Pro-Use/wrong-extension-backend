@@ -1,20 +1,29 @@
 title: Invites
-preset: pages
+template: invites
 icon: ?open
 
 options:
   url: false
   status: false
   delete: false
-
-drafts:
-  extends: sections/invites
-  headline: Unpublished popup set
   
-unlisted:
-  extends: sections/invites
-  headline: Unlisted popup set
+sections:
+    drafts:
+      extends: sections/invites
+      headline: Unpublished popup set
+      status: drafts
 
-listed:
-  extends: sections/invites
-  headline: Published popup set
+    unlisted:
+      extends: sections/invites
+      headline: Unlisted popup set
+      status: unlisted
+
+    listed:
+      extends: sections/invites
+      headline: Published popup set
+      status: published
+
+    fields:
+        fields:
+            lastUpdated:
+                type: hidden

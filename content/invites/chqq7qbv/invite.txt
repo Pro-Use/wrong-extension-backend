@@ -2,30 +2,46 @@ Title: rob
 
 ----
 
-From: 2021-07-05
+From: 2021-10-09
 
 ----
 
-To: 2021-07-20
+To: 2021-10-17
+
+----
+
+Popupsettext: 
 
 ----
 
 Popups:
 
 - 
+  popup-text: ""
   url: http://rob.prou.se
   fullscreen: 'false'
   width: 200
   height: 200
   position: mid-center
   time: 12:00:00
+  date: ""
 - 
+  popup-text: ""
   url: http://test.com
-  fullscreen: 'true'
+  fullscreen: 'false'
   width: null
   height: null
   position: ""
   time: 11:00:00
+  date: 2021-11-19
+
+----
+
+Dateerror: false
+
+----
+
+Popup-set-text: 
 
 ----
 

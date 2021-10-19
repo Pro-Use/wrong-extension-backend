@@ -1,0 +1,40 @@
+Title: test2
+
+----
+
+From: 2021-10-12
+
+----
+
+To: 2021-10-14
+
+----
+
+Popupsettext: 
+
+----
+
+Popups:
+
+- 
+  popup-text: ""
+  url: http://test.com
+  fullscreen: 'true'
+  width: null
+  height: null
+  position: ""
+  time: 09:00:00
+  date: 2021-10-13, 2021-10-14
+  errors: ""
+
+----
+
+Check: false
+
+----
+
+Dateerror: true
+
+----
+
+Dateerrortext: ERROR:  Popup 'http://test.com' has an invalid date, it must be between 2021-10-12 and 2021-10-14
