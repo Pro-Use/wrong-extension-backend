@@ -1,5 +1,5 @@
 <?php
-
+ header("Access-Control-Allow-Origin: *");
 
 $data = $page->children()
     ->filter(function ($child) {
@@ -7,6 +7,7 @@ $data = $page->children()
   });
 
 $now = new DateTime("now");
+$now_string = $result = $now->format('Y-m-d');
 $popups_json = [];
 
 foreach($data as $article) {
@@ -20,23 +21,27 @@ foreach($data as $article) {
     $popup_json = [];
 
     foreach($popups as $popup) {
-        $popup_json[] = [
-            'url' => $popup->url(),
-            'fullscreen' => (string)$popup->fullscreen(),
-            'width' => (string)$popup->width(),
-            'height' => (string)$popup->height(),
-            'position' => (string)$popup->position(),
-            'time' => (string)$popup->time(),
-            'date' => (string)$popup->date(),
-        ];
+        $dates = explode(",", $popup->date());
+        foreach($dates as $date){
+            $date = trim($date);
+            if ($date == $now_string || $date == ""){
+                $popup_json[] = [
+                'title' => (string)$article->title(), 
+                'id' => base64_encode($popup->url()),
+                'url' => (string)$popup->url(),
+                'fullscreen' => (string)$popup->fullscreen(),
+                'width' => (string)$popup->width(),
+                'height' => (string)$popup->height(),
+                'position' => (string)$popup->position(),
+                'time' => (string)$popup->time(),
+                'dates' => $dates
+                ];
+                break;
+            }
+        }
     }
 
-    $popups_json[] = [
-      'title' => (string)$article->title(), 
-      'from'=> (string)$article->from(),
-      'to' => (string)$article->to(),
-      'popups'   => $popup_json,
-    ];
+    $popups_json[] = $popup_json;
   }
 }
 
