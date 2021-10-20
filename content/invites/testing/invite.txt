@@ -26,3 +26,21 @@ Popups:
   time: 12:20:00
   date: ""
   hash_id: ""
+- 
+  popup-text: test
+  url: https://rob.prou.se
+  fullscreen: 'true'
+  width: null
+  height: null
+  position: ""
+  time: 11:00:00
+  date: 2021-10-20
+- 
+  popup-text: test2
+  url: http://b.com
+  fullscreen: 'true'
+  width: null
+  height: null
+  position: ""
+  time: 13:00:00
+  date: 2021-10-01
