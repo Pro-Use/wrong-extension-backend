@@ -99,7 +99,7 @@ if (count($next_popups) == 0) {
                     'height' => (string)$next_popup['popup']->height(),
                     'position' => (string)$next_popup['popup']->position(),
                     'time' => (string)$next_popup['popup']->time(),
-                    'dates' => (string)$next_popup['date']->format('Y-m-d'),
+                    'date' => (string)$next_popup['date']->format('Y-m-d'),
                     'diff' => $next_popup_diff
                     ];
 }
