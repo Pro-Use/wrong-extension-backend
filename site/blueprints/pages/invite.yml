@@ -4,6 +4,14 @@ icon: open
 
 options:
   url: false
+  
+status:
+  draft:
+    label: Unmoderated
+    text: This popup set has not been moderated yet.
+  unlisted:
+    label: Live
+    text: This popup set has been moderated and accepted.
 
 fields:
     fromto:

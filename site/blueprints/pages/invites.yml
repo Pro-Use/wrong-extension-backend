@@ -10,18 +10,13 @@ options:
 sections:
     drafts:
       extends: sections/invites
-      headline: Unpublished popup set
+      headline: Unmoderated popup sets
       status: drafts
 
     unlisted:
       extends: sections/invites
-      headline: Unlisted popup set
+      headline: Live popup sets
       status: unlisted
-
-    listed:
-      extends: sections/invites
-      headline: Published popup set
-      status: published
 
     fields:
       extends: fields/main_instructions
