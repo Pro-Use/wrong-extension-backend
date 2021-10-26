@@ -1,0 +1,21 @@
+Title: RebeccaTestForCuratorInvite
+
+----
+
+From: 
+
+----
+
+To: 
+
+----
+
+Popupsettext: 
+
+----
+
+Popups: 
+
+----
+
+Emailed: false

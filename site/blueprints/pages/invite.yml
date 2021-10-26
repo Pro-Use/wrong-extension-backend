@@ -9,6 +9,9 @@ fields:
     fromto:
         extends: fields/fromto
         label: From/To
+    popupSetTitle:
+        label: "Title for popup group"
+        type: text
     popupSetText:
         label: "Info for popup group:"
         type: textarea
@@ -19,4 +22,8 @@ fields:
     info: 
         label: Info
         type: info
-        text: "instructions"
+        text: "The title and info for the 'Popup group' relate to all the popups, to add an individual popup click the '+' button"
+    emailed:
+        type: text
+        disabled: true
+        default: 'false'

@@ -2,10 +2,19 @@
 label: Popups
 type: structure
 fields:
-  popup-text:
+  info: 
+      label: Info
+      type: info
+      text: "Title and text relate to this individual popup, the popup can be fullscreen or the size of the popup is set in pixels and the screen position can be one of 9 options. Time is the time of day the popup appears and date chooses specific day(s) within dates of this popup set to show the popup - leave blank for every day"
+  popup_title:
+    label: "Popup title"
+    type: text
+    required: true
+  popup_text:
     label: "Popup info"
     type: textarea
     buttons: false
+    required: true
   url:
     label: Content
     type: url
@@ -61,7 +70,3 @@ fields:
       query: page.returnDates
       width: 1/7
       # help: "Must be a date between {{ page.from.toDate('Y-m-d') }} and {{ page.to.toDate('Y-m-d') }}"
-  info: 
-      label: Info
-      type: info
-      text: "Instructions"

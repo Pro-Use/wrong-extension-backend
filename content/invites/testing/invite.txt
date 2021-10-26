@@ -2,6 +2,10 @@ Title: testing
 
 ----
 
+Email: robertprouse@gmail.com
+
+----
+
 From: 2021-10-01
 
 ----
@@ -10,37 +14,53 @@ To: 2021-10-31
 
 ----
 
-Popupsettext: something
+Popupsettitle: A test Popup
+
+----
+
+Popupsettext: something about the popup set here
 
 ----
 
 Popups:
 
 - 
-  popup-text: soemthing
-  url: http://a.com
+  popup_title: "1"
+  popup_text: something about the popup here
+  url: https://rob.prou.se/dev/wrong
   fullscreen: 'true'
   width: null
   height: null
   position: ""
-  time: 12:20:00
+  time: 09:11:00
   date: ""
+  popup-text: soemthing
   hash_id: ""
 - 
-  popup-text: test
+  popup_title: "2"
+  popup_text: something else about the popup here
   url: https://rob.prou.se
-  fullscreen: 'true'
-  width: null
-  height: null
-  position: ""
-  time: 11:00:00
-  date: 2021-10-20
+  fullscreen: 'false'
+  width: 300
+  height: 300
+  position: mid-left
+  time: 22:05:00
+  date: ""
+  popup-text: test
 - 
+  popup_title: "3"
+  popup_text: something else else about the popup here
+  url: http://google.com
+  fullscreen: 'false'
+  width: 200
+  height: 600
+  position: top-center
+  time: 22:33:00
+  date: >
+    2021-10-01, 2021-10-26, 2021-10-20,
+    2021-10-31
   popup-text: test2
-  url: http://b.com
-  fullscreen: 'true'
-  width: null
-  height: null
-  position: ""
-  time: 13:00:00
-  date: 2021-10-01
+
+----
+
+Emailed: 

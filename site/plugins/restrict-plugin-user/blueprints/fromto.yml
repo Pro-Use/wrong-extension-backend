@@ -1,6 +1,11 @@
 type: group
 label: dates
 fields:
+    email:
+      label: Email
+      type: email
+      width: 1
+      required: true
     from:
       label: Start
       type: date
@@ -11,3 +16,4 @@ fields:
       type: date
       width: 1/2
       required: true
+

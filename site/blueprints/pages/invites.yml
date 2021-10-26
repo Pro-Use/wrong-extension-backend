@@ -24,6 +24,4 @@ sections:
       status: published
 
     fields:
-        fields:
-            lastUpdated:
-                type: hidden
+      extends: fields/main_instructions
