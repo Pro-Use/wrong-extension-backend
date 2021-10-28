@@ -6,23 +6,29 @@ options:
   url: false
   status: false
   delete: false
-  
-sections:
-    drafts:
-      extends: sections/invites
-      headline: Unpublished popup set
-      status: drafts
+tabs:
+  invites:
+    label: Invites 
+    sections:
+      drafts:
+        extends: sections/invites
+        headline: Unmoderated popup sets
+        status: drafts
 
-    unlisted:
-      extends: sections/invites
-      headline: Unlisted popup set
-      status: unlisted
+      unlisted:
+        extends: sections/invites
+        headline: Live popup sets
+        status: unlisted
 
-    listed:
-      extends: sections/invites
-      headline: Published popup set
-      status: published
-
-    fields:
+      fields:
         extends: fields/main_instructions
           
+  extension:
+    label: Extension
+    sections:
+      about:
+        type: fields
+        fields:
+          extAbout:
+            label: Extension - 'About' Text
+            type: writer 

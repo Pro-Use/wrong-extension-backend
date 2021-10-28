@@ -16,9 +16,9 @@ permissions:
     create: true
     delete: true
   pages:
-    changeSlug: false
+    changeSlug: true
     changeStatus: true
-    changeTemplate: false
+    changeTemplate: true
     changeTitle: true
     create: true
     delete: true
@@ -44,10 +44,7 @@ permissions:
     changeName: true
     changePassword: true
     changeRole: true
-    create:
-        curator: true
-        admin: false
-        extension-admin: false
+    create: true
     delete: true
     update: true
 

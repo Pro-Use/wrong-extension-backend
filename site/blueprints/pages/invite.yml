@@ -22,15 +22,14 @@ fields:
         type: text
     popupSetText:
         label: "Info for popup group:"
-        type: textarea
-        buttons: false
+        type: writer
     popups:
         extends: fields/popups
         label: Popups
     info: 
         label: Info
         type: info
-        text: "The title and info for the 'Popup group' relate to all the popups, to add an individual popup click the '+' button"
+        text: "The title and info for the 'Popup group' relate to all the popups, to add an individual popup click the '+' button.\n\n To decorate text and add links in the info sections simply highlight the text"
     emailed:
         type: text
         disabled: true
