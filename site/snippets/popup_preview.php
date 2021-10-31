@@ -1,9 +1,11 @@
-<h1><?= $page->title() ?></h1>
-  <?php
+<section id="popup-info" class="next-popup box fade red-shadow">
+    <h2 class="box-header">TEST BUTTONS: Visible to curators / admin uses only</h2>
+    <p class="body-content"> Use the buttons here to preview the pop windows in this series: </p>
+    <?php
     $popups = $page->popups()->toStructure();
     $win_id = 0;
     foreach($popups as $popup) {?>
-  <input type="button" value="<?=(string)$popup->url()?>"
+        <input type="button" value="<?=(string)$popup->url()?>"
             data-fs="<?=(string)$popup->fullscreen()?>"
             data-width="<?=(string)$popup->width()?>"
             data-height="<?=(string)$popup->height()?>"
@@ -17,6 +19,8 @@
   <br>
     <?php }
   ?>
+</section>
+ 
   <script >
     const buttons = document.getElementsByTagName('input');
     console.log(buttons);
