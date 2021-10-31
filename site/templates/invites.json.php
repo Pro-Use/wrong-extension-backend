@@ -45,26 +45,33 @@ foreach($data as $article) {
                 break;
             }
         }
-        $now = new DateTime($now_string, new DateTimeZone('Europe/London'));
-        if ($to > $now) {
-            foreach($dates as $date){
-                if ($date == "") {
-                    $popup_date = clone $now;
-                    $popup_date->modify('+1 day');
-                } else {
-                    $popup_date = new DateTime($date, new DateTimeZone('Europe/London'));
-                }
-                if ($popup_date > $now) {
-                    $next_popups[] = [
-                    'time' => (string)$popup->time(),
-                    'date' => $popup_date,
-                    'popup_set' => $article,
-                    'popup'=> $popup,
-                    ];
-                    break;
-                }
+    }
+  }
+  if ($now < $to){
+      
+    $popups = $article->popups()->toStructure();
+    $popup_json = [];
 
+    foreach($popups as $popup) {
+        $now = new DateTime($now_string, new DateTimeZone('Europe/London'));
+        $dates = explode(", ", $popup->date());
+        foreach($dates as $date){
+            if ($date == "") {
+                $popup_date = clone $now;
+                $popup_date->modify('+1 day');
+            } else {
+                $popup_date = new DateTime($date, new DateTimeZone('Europe/London'));
             }
+            if ($popup_date > $now) {
+                $next_popups[] = [
+                'time' => (string)$popup->time(),
+                'date' => $popup_date,
+                'popup_set' => $article,
+                'popup'=> $popup,
+                ];
+                break;
+            }
+
         }
     }
 
@@ -93,7 +100,7 @@ if (count($next_popups) == 0) {
                     'popup_info' => (string)$next_popup['popup']->popup_text(), 
                     'id' => (string)$next_popup_id,
                     'url' => (string)$next_popup['popup']->url(),
-                    'info_url' => (string)$next_popup['popup']->url()."?id=".$next_popup_id,
+                    'info_url' => (string)$next_popup['popup_set']->url()."?id=".$next_popup_id,
                     'fullscreen' => (string)$next_popup['popup']->fullscreen(),
                     'width' => (string)$next_popup['popup']->width(),
                     'height' => (string)$next_popup['popup']->height(),

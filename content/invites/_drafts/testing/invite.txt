@@ -10,23 +10,29 @@ From: 2021-10-01
 
 ----
 
-To: 2021-10-31
+To: 2021-11-07
 
 ----
 
-Popupsettitle: Group of popups curated by Gallery Name
+Popupsettitle: PARA-NET
 
 ----
 
-Popupsettext: <p><strong>Some Info</strong></p><p>This is about the popup, etc.... with <code>links</code></p><p></p>
+Popupsettext: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat viverra ex vitae tempus. Nulla pellentesque varius erat, eget pretium urna vehicula eget. Integer iaculis, nisl a venenatis ultrices, enim dolor facilisis purus, non posuere justo urna pharetra risus. Proin sed odio diam. <strong>Aliquam</strong> tempor congue metus ut placerat. Nullam mollis consectetur nibh. In hac habitasse platea dictumst. Morbi ullamcorper nisl quis lectus dictum, sit amet bibendum mi luctus. Donec non lorem porttitor nunc<em> mattis bibendum </em>ac vel orci.</p><p><a href="google.com" target="_blank" rel="noopener noreferrer nofollow">Link to gallery website</a></p>
 
 ----
 
 Popups:
 
 - 
-  popup_title: "1"
-  popup_text: something about the popup here
+  popup_title: Derived by Chris Speed
+  popup_text: >
+    Proin sed odio diam. Aliquam tempor
+    congue metus ut placerat. Nullam mollis
+    consectetur nibh. In hac habitasse
+    platea dictumst. Morbi ullamcorper nisl
+    quis lectus dictum, sit amet bibendum mi
+    luctus.
   url: https://rob.prou.se/dev/wrong
   fullscreen: 'true'
   width: null
@@ -37,10 +43,14 @@ Popups:
   popup-text: soemthing
   hash_id: ""
 - 
-  popup_title: >
-    Lorem ipsum dolar sit amet by Artist
-    Name
-  popup_text: something else about the popup here
+  popup_title: Derived by Chris Speed
+  popup_text: >
+    Proin sed odio diam. Aliquam tempor
+    congue metus ut placerat. Nullam mollis
+    consectetur nibh. In hac habitasse
+    platea dictumst. Morbi ullamcorper nisl
+    quis lectus dictum, sit amet bibendum mi
+    luctus.
   url: https://rob.prou.se
   fullscreen: 'false'
   width: 300
@@ -50,8 +60,14 @@ Popups:
   date: ""
   popup-text: test
 - 
-  popup_title: "3"
-  popup_text: something else else about the popup here
+  popup_title: Derived by Chris Speed
+  popup_text: >
+    Proin sed odio diam. Aliquam tempor
+    congue metus ut placerat. Nullam mollis
+    consectetur nibh. In hac habitasse
+    platea dictumst. Morbi ullamcorper nisl
+    quis lectus dictum, sit amet bibendum mi
+    luctus.
   url: http://google.com
   fullscreen: 'false'
   width: 200
