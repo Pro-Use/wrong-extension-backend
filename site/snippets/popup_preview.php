@@ -2,14 +2,19 @@
   <?php
     $popups = $page->popups()->toStructure();
     $win_id = 0;
-    foreach($popups as $popup) {?>
+    foreach($popups as $popup) {
+        $id = base64_encode($popup->url());
+        ?>
   <input type="button" value="<?=(string)$popup->url()?>"
             data-fs="<?=(string)$popup->fullscreen()?>"
             data-width="<?=(string)$popup->width()?>"
             data-height="<?=(string)$popup->height()?>"
             data-pos="<?=(string)$popup->position()?>"
             data-time="<?=(string)$popup->time()?>"
+            data-info="<?=(string)$page->url().'?id='.$id?>"
             data-ID="<?=$win_id?>"
+            data-trigger="page"
+
             />
         <?php
         
@@ -21,8 +26,22 @@
     const buttons = document.getElementsByTagName('input');
     console.log(buttons);
     for(let i=0;i<buttons.length;i++){
-        buttons[i].addEventListener("click", function(){
-            var settings = "";
+        buttons[i].addEventListener("click", open_popup)
+    };
+
+    function open_popup(){
+        if (this.dataset.trigger == "page") {
+            // info window
+            var settings = "menubar=0,toolbar=0,location=0,status=0,width=400,height=400";
+            height = 400;
+            width = 400;
+            vPosition = (screen.height) ? (screen.height-height)/2 : 0;
+            settings += ",top="+vPosition;
+            hPosition = (screen.width) ? (screen.width-width)/2 : 0;
+            settings += ",left="+hPosition;
+            window.open(this.dataset.info, "_blank", settings);
+            // popup
+            var settings = "menubar=0,toolbar=0,location=0,status=0,";
             console.log(this.dataset);
             if (this.dataset.fs === "true"){
                 settings = "fullscreen";
@@ -54,8 +73,8 @@
                 }
                 console.log("settings:"+settings );
             }
-            popup = window.open(this.value, "popup"+this.ID, settings);
-        });
+            window.open(this.value, "_blank", settings);
+        }
     };
   </script>
 

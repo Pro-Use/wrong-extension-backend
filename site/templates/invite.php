@@ -16,7 +16,7 @@
             <div>
                 <?=$popup->popup_text()?>
             </div>
-            <h2>About these popups:</h2>
+            <h2>About the exhibition:</h2>
             <div>
                 <?=$page->popupSetText()?>
             </div>

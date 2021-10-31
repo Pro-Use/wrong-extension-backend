@@ -1,0 +1,187 @@
+Title: PARA-NET
+
+----
+
+Email: hello@arebyte.com
+
+----
+
+From: 2021-11-01
+
+----
+
+To: 2021-11-07
+
+----
+
+Popupsettitle: Exhibition
+
+----
+
+Popupsettext: <p>Paraspaces are the layers of reality that weave together, forming the warp and weft of reality. Paraspaces are an emergent property of swarm behavior, rising out of collective belief, communal engagement rising out of semi-anonymised forum posters, neural network-powered bots, rising out of techno-occult covens and well-known non-profits we can’t name.</p><p>The paraspace residency traces mycelial links between paraspaces, following evidence of lost civilisations through deserted forums, esoteric institutions and the occasional small-scale internet connection. Residency is an experiment in distributed paraspace cartography producing values that aren’t values, un-realities that are real.</p><p>Paraspaces are in the process of being unveiled now.</p><p>Curated arebyte and Rachel Falconer, Head of Digital Arts Computing, Goldsmiths University London. Goldsmiths Computing Department</p><p>Participating Artists:<br>Chris Speed, Pietro Bardini, Nahab, Alexander MacKinnon, Samuel Turner, Szonja Szendi, Jonas Grünwald &amp; George Kuhn</p><p>This project is part of a residency with <a href="https://www.arebyte.com/" target="_blank" rel="noopener noreferrer nofollow">arebyte gallery</a>.</p><p>To see all works visit: <a href="https://para-net.space/" target="_blank" rel="noopener noreferrer nofollow">https://para-net.space/</a></p>
+
+----
+
+Popups:
+
+- 
+  popup_title: Derived by Chris Speed
+  popup_text: |
+    Derived is an audiovisual experience inspired by Guy Debord’s Dérive theory in which one passes through ambient urban spaces.
+    
+    
+    3D scenes were created using photogrammetry of the artist’s hometown and found objects.  ⁠
+    
+    
+    Music and Visuals: Chris Speed Visuals
+    
+    
+    AI Collaborators: Holly+ and GPT-2
+    https://holly.plus/
+    
+    
+    Typography and Logos: Szonja Szendi
+    https://www.instagram.com/sszznj/
+    
+    
+    Created for the Paraspaces Group Residency with Arebyte Gallery and Goldsmiths University of London
+  url: https://para-net.space/spaces/derived/
+  fullscreen: 'false'
+  width: 750
+  height: 456
+  position: mid-center
+  time: 13:00:00
+  date: 2021-11-01
+- 
+  popup_title: 'SOUND BLESSINGS by Pietro Bardini '
+  popup_text: |
+    Sound Blessings: Sonic rituals and engraved notations in London’s nature reserves, is a research project led by Pietro Bardini and developed in partnership with the Lambent Institute.
+    It focuses on four engraved stones discovered around East London’s nature reserves of Epping Forest and the Middlesex Filter Beds. This research is a documentation of those findings and proposes an interpretation of their origin and uses.
+    
+    Bio:
+    Pietro Bardini is an artist working with sounds and computation. His compositional systems explore the interactions between organic and inorganic entities and exist on the boundaries between the animate and inanimate.
+    
+    Website: pietrobardini.com
+    Instagram: pietrobardini
+  url: >
+    https://para-net.space/spaces/sound-blessings/
+  fullscreen: 'false'
+  width: 800
+  height: 800
+  position: top-right
+  time: 13:00:00
+  date: 2021-11-02
+- 
+  popup_title: Hidden Histories by Nahab
+  popup_text: |
+    Hidden Histories is a guerrilla public artwork created by media artist Nahab as part of the paraSpaces residency at arebyte Gallery.
+    
+    Following the rise to prominence of the conversations surrounding Britain’s statuary during the 2020 Black Lives Matter protests, it became clear that much of London’s statuary lacks any information which might give it historical context. Anyone wishing to understand the place of these figures in history is forced to search for their own information online. However, it has become increasingly clear over the last few years that the act of ‘doing your own research’ is highly susceptible to misinformation and propaganda, and that following even one wrong source can lead to a rabbit hole of information, which only corroborates itself.
+    
+    The Hidden Histories project aims to take the uncertainty out of this, by doing your own research for you.
+    
+    Bio:
+    Nahab is a visual artist and researcher exploring the relationships between
+    technologies and contemporary knowledge making through the methodology of infrastructural performance.
+    Beginning from a post-factual position which regards mythology, conspiracy and esotericism as technologies in their own right, Nahab seeks to understand the ways in which they can be used to do work in the world when they are freed from the truth/lie dichotomy. Not simply content to pose the question, Nahab takes a more confrontational stance, which is at its heart, concerned with developing practical tools to get things done.
+    Nahab has been exhibited at the National Gallery and Sotheby’s, and currently has work
+    awaiting publication with Routledge examining the intersection of afro-futurism and genre horror.
+    They hold a masters degree in Digital Culture from Goldsmiths University, and are currently
+    working towards an MFA in Computational Arts, also at Goldsmiths.
+    
+    Website: ADeadChannel.com
+  url: >
+    https://para-net.space/spaces/hidden-histories/
+  fullscreen: 'false'
+  width: 600
+  height: 600
+  position: top-left
+  time: 13:00:00
+  date: 2021-11-03
+- 
+  popup_title: >
+    Cumbernauld eSports Centre for
+    Competitive Walking Simulators by
+    Alexander MacKinnon
+  popup_text: |
+    Funded by the Lambent Institute, the 2021 redevelopment of the Cumbernauld Shopping Centre into the new CeCCWS has transformed the centre into both the UK's largest esports facility and cultural institution. Cumbernauld is set to host the first Walking Simulator World Championship in 2022, cementing the town into the world stage of the esports scene.You can explore our facilities using the centre's virtual tour tool, powered by advanced Telepresence™ technology.
+    
+    Bio:
+    Alexander MacKinnon is a British-Chinese artist based in London. Alexander’s practice
+    predominantly focuses on creating simulated 3D spaces and experimental video games. Within
+    these virtual realms Alexander’s work presents warped perspectives of human experience –
+    often drawing on ideas of Posthumanist virtuality and the Uncanny to explore the dissolution of
+    reality in postmodern culture, and narratives that reflect dystopic parallels to the real world.
+    Alexander is currently at Goldsmiths University studying in the MFA Computational Arts
+    Program.
+    Website: alexander-mackinnon.com
+    Instagram: alexandersnout
+  url: >
+    https://para-net.space/spaces/cumbernauld-esports-centre/
+  fullscreen: 'false'
+  width: 900
+  height: 900
+  position: bottom-center
+  time: 13:00:00
+  date: 2021-11-04
+- 
+  popup_title: 'Stone Garden by Jonas Grünwald & George Kuhn'
+  popup_text: |
+    Stone garden is a digital world where users can stack stones painted with visual assets of their choice. Individuals wandering through the space can find stacks built by others, and add their own stones. The garden is an organic, living archive, cultivated by the community of virtual visitors.
+    
+    Bios:
+    George Kuhn is a computational artist and researcher interested in technological ecosystems. His work is focussed on symbiosis and time in multi-species systems. In his practice he uses ad-hoc mixtures of theory, fiction and art to explore technological ecosystems, following stories of biochemical innovation across deep time, plants terraforming their environments, bacterial warfare and internet extinction events. George is currently undertaking an MFA in Computational Arts.
+    Website: https://gmkuhn.hotglue.me/
+    Instagram: @g_micah_kuhn
+    https://www.instagram.com/g_micah_kuhn/
+    
+    Jonas Grünwald is a German multidisciplinary practitioner, working collaboratively across the wider fields of media art, technolgy and conceptual design. His artistic practice explores the relationship between humans and networked technological frameworks through 'Internet Archeology', and processes of automated and organic discovery of elements and their relationships, as well as the development unconventional tools and interfaces between humans and the digital domain. In collaboration with other artists and designers, he creates web and physically based spaces and experiences as part of self-directed and comissioned projects, in addition to helping run the type platform and foundry 'Gruppo Due' as a founding member.
+    Website: jonasg.me
+    Instagram: jonas.gruenwald
+  url: >
+    https://para-net.space/spaces/stone-garden/
+  fullscreen: 'false'
+  width: 900
+  height: 900
+  position: mid-center
+  time: 13:00:00
+  date: 2021-11-05
+- 
+  popup_title: A Vital Mess by Samuel Turner
+  popup_text: |
+    Stemming from a reply to ‘realities’ provided by guest respondent to the residency artist Alice Yuan Zhang, the digital realm is inhabited by a small collection of memorial ghosts. ‘A Vital Mess’ is a sketch of reminiscences scattered about a digital oneiric non-space and embodied by the technologies which inhabited them.
+    
+    Bio:
+    Website: samuelantonioturner.com
+    Instagram: @turner_png
+    Twitter: @turner_png
+  url: https://para-net.space/
+  fullscreen: 'true'
+  width: null
+  height: null
+  position: ""
+  time: 13:00:00
+  date: 2021-11-06
+- 
+  popup_title: Szonja
+  popup_text: |
+    Bio:
+    Szonja is an interdisciplinary artist existing on the borders of perceived realities. Their work of life is innately expressive, often poetic, and it revolves around seeking meaning and
+    understanding through the points of connection in-between seemingly closed off and
+    ever-growing life systems and the mystery and beauty of act that is inherently human.
+    Involving mainly - but not solely - photography, digital painting and illustration, poetry and fiction into their practice, Szonja aims to explore the hidden, the abstract and the transparent, with the intention to evoke concealed emotions, and to bring forth acceptance and curiosity towards the contradictory and the unknown.
+    Through their practice and research, most recently they have been focusing on personal and
+    group identities, social norms and rules (and their systems in work), the concept of freedom,
+    and nonlinear, spherical thinking (opposed to the linear and the binary).
+    Digital Garden cultivated by them on instagram: @sszznj
+  url: https://para-net.space/spaces/inside/
+  fullscreen: 'false'
+  width: 400
+  height: 400
+  position: mid-center
+  time: 13:00:00
+  date: 2021-11-07
+
+----
+
+Emailed: true
