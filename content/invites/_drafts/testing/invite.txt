@@ -33,7 +33,7 @@ Popups:
   height: null
   position: ""
   time: 09:11:00
-  date: ""
+  date: 2021-10-02
   popup-text: soemthing
   hash_id: ""
 - 
@@ -44,7 +44,7 @@ Popups:
   width: 300
   height: 300
   position: mid-left
-  time: 22:05:00
+  time: 22:00:00
   date: ""
   popup-text: test
 - 
@@ -55,10 +55,8 @@ Popups:
   width: 200
   height: 600
   position: top-center
-  time: 22:33:00
-  date: >
-    2021-10-01, 2021-10-26, 2021-10-20,
-    2021-10-31
+  time: 09:33:00
+  date: 2021-10-01, 2021-10-20, 2021-10-31
   popup-text: test2
 
 ----
