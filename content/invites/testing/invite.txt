@@ -26,13 +26,7 @@ Popups:
 
 - 
   popup_title: Derived by Chris Speed
-  popup_text: >
-    Proin sed odio diam. Aliquam tempor
-    congue metus ut placerat. Nullam mollis
-    consectetur nibh. In hac habitasse
-    platea dictumst. Morbi ullamcorper nisl
-    quis lectus dictum, sit amet bibendum mi
-    luctus.
+  popup_text: '<p>Proin sed odio diam. Aliquam tempor congue metus ut placerat. Nullam mollis consectetur nibh. In hac habitasse platea dictumst. Morbi ullamcorper nisl quis lectus dictum, sit amet bibendum mi luctus. <a href="https://www.arebyte.com" rel="noopener noreferrer nofollow">Link to gallery website</a></p>'
   url: https://rob.prou.se/dev/wrong
   fullscreen: 'true'
   width: null
@@ -44,13 +38,7 @@ Popups:
   hash_id: ""
 - 
   popup_title: Derived by Chris Speed
-  popup_text: >
-    Proin sed odio diam. Aliquam tempor
-    congue metus ut placerat. Nullam mollis
-    consectetur nibh. In hac habitasse
-    platea dictumst. Morbi ullamcorper nisl
-    quis lectus dictum, sit amet bibendum mi
-    luctus.
+  popup_text: '<p>Proin sed odio diam. Aliquam tempor congue <strong>metus</strong> ut placerat. Nullam mollis consectetur nibh. In hac habitasse platea dictumst. Morbi ullamcorper nisl quis lectus dictum, sit amet bibendum mi luctus. <a href="https://www.arebyte.com" rel="noopener noreferrer nofollow">Link to gallery website</a></p>'
   url: https://rob.prou.se
   fullscreen: 'false'
   width: 300
@@ -61,13 +49,7 @@ Popups:
   popup-text: test
 - 
   popup_title: Derived by Chris Speed
-  popup_text: >
-    Proin sed odio diam. Aliquam tempor
-    congue metus ut placerat. Nullam mollis
-    consectetur nibh. In hac habitasse
-    platea dictumst. Morbi ullamcorper nisl
-    quis lectus dictum, sit amet bibendum mi
-    luctus.
+  popup_text: '<p>Proin sed odio diam. Aliquam tempor congue <em>metus</em> ut placerat. <strong>Nullam</strong> mollis consectetur nibh. In hac habitasse platea dictumst. Morbi ullamcorper nisl quis lectus dictum, sit amet bibendum mi luctus. <a href="https://www.arebyte.com" rel="noopener noreferrer nofollow">Link to gallery website</a></p>'
   url: http://google.com
   fullscreen: 'false'
   width: 200
