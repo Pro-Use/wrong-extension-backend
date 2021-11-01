@@ -1,6 +1,15 @@
 
 label: Popups
 type: structure
+columns:
+  popup_title:
+    width: 1/6
+  url:
+    width: 2/6
+  time:
+    width: 1/6
+  date:
+    width: 2/6
 fields:
   info: 
       label: Info
@@ -12,11 +21,11 @@ fields:
     required: true
   popup_text:
     label: "Popup info"
-    type: textarea
+    type: writer
     buttons: false
     required: true
   url:
-    label: Content
+    label: Url
     type: url
     width: 1/7
     required: true
