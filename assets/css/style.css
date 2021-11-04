@@ -467,14 +467,17 @@ a:hover, a:active{
       outline: transparent;
       color: blue;
       font-family: inherit;
-      font-size: .875em;
+      font-size: .675em;
       font-family: futura-pt-bold, sans-serif;
       font-weight: 700;
       padding: 5px 20px 5px;
-      border-radius: 30px;
+      border-radius: 300px;
       margin-bottom: .5em;
       margin-right: .5em;
       cursor: pointer;
+      white-space: normal;
+      word-wrap: break-word;
+      text-align: left;
     }
 
     input[type=button]:hover{
