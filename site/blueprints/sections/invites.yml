@@ -1,4 +1,5 @@
 type: pages
+create: invite
 headline: Popups
 parent: site.find("invites")
 sortBy: from desc

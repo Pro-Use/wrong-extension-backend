@@ -1,3 +1,34 @@
-title: Site
-preset: pages
-unlisted: true
+title: Invites
+template: invites
+icon: ?open
+
+options:
+  url: false
+  status: false
+  delete: false
+tabs:
+  invites:
+    label: Invites 
+    sections:
+      drafts:
+        extends: sections/invites
+        headline: Unmoderated popup sets
+        status: drafts
+
+      unlisted:
+        extends: sections/invites
+        headline: Live popup sets
+        status: unlisted
+
+      fields:
+        extends: fields/main_instructions
+          
+  extension:
+    label: Extension
+    sections:
+      about:
+        type: fields
+        fields:
+          extAbout:
+            label: Extension - 'About' Text
+            type: writer 

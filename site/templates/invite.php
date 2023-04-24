@@ -1,68 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<?php snippet('header'); ?>
+<div class="container info">
+    <div class="main">
+<?php
+    if ($kirby->user()) {
+        snippet('popup_preview');  
+    } 
+?>
+<?php 
+    $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING);
+    if ($id) {
+        $popups = $page->popups()->toStructure();
+        foreach($popups as $popup) {
+            if ((string)base64_encode($popup->url()) == $id) { ?>
+        <section id="popup-info" class="next-popup box fade green-shadow">
+            <h2 class="box-header">Current</h2>
+            <p id="popup-title" class="popup-title"><?=$popup->popup_title()?></p>
+            <dl class="popup-details">
+                <dt>Part of:</dt>
+                <dd id="popup-set-title"><?= $page->popupSetTitle()?></dd>
+            </dl>
+            <div class="body-content">
+                <?=$popup->popup_text()?>
+            </div>
+        </section>
+        <section id="popup-info" class="next-popup box fade green-shadow">
+            <h2 class="box-header"><?=$page->popupSetTitle()?></h2>
+            <div class="body-content">
+                <?=$page->popupSetText()->kt();?>
+            </div>
+        </section>
+    <?php } } } ?>
+    </div>
+    <footer class="fade">
+        <div class="contact-link-container">
+            <a class="link-item" href="mailto:hello@arebyte.com">Contact</a>
+        </div>
+        <div class="wrong-footer">
+            <a href="https://thewrong.org/" title="The Wrong biennale" target="_Blank">
+            <img class="wrong-logo" alt="The Wrong Biennale" src="<?= $site->url();?>/assets/img/tw5_logo-B.png" width="90px" height="auto"/>
+            </a>
+        </div>
+    </footer>
+</div>
 
-</head>
-<body>
-  <h1><?= $page->title() ?></h1>
-  <?php
-    $popups = $page->popups()->toStructure();
-    $win_id = 0;
-    foreach($popups as $popup) {?>
-  <input type="button" value="<?=(string)$popup->url()?>"
-            data-fs="<?=(string)$popup->fullscreen()?>"
-            data-width="<?=(string)$popup->width()?>"
-            data-height="<?=(string)$popup->height()?>"
-            data-pos="<?=(string)$popup->position()?>"
-            data-time="<?=(string)$popup->time()?>"
-            data-ID="<?=$win_id?>"
-            />
-        <?php
-        
-        $win_id += 1;?>
-  <br>
-    <?php }
-  ?>
-  <script >
-    const buttons = document.getElementsByTagName('input');
-    console.log(buttons);
-    for(let i=0;i<buttons.length;i++){
-        buttons[i].addEventListener("click", function(){
-            var settings = "";
-            console.log(this.dataset);
-            if (this.dataset.fs === "true"){
-                settings = "fullscreen";
-            } else {
-                height = parseInt(this.dataset.height);
-                width = parseInt(this.dataset.width);
-                settings += "height="+height+",width="+width;
-                const pos_arr = this.dataset.pos.split("-");
-                console.log(pos_arr);
-//                vertical
-                if (pos_arr[0] === "top"){
-                    settings += ",top="+0;
-                } else if (pos_arr[0] === "mid") {
-                    vPosition = (screen.height) ? (screen.height-height)/2 : 0;
-                    settings += ",top="+vPosition;
-                } else if (pos_arr[0] === "bottom"){
-                    vPosition = screen.height-height;
-                    settings += ",top="+vPosition;
-                }
-//                horizontal
-                if (pos_arr[1] === "left") {
-                    settings += ",left="+0;
-                } else if (pos_arr[1] === "center") {
-                    hPosition = (screen.width) ? (screen.width-width)/2 : 0;
-                    settings += ",left="+hPosition;
-                } else if (pos_arr[1] === "right"){
-                    hPosition = screen.width-width;
-                    settings += ",left="+hPosition;
-                }
-                console.log("settings:"+settings );
-            }
-            popup = window.open(this.value, "popup"+this.ID, settings);
-        });
-    };
-  </script>
-</body>
-</html>
+<div id="about" class="container about">
+    <div class="main">
+    <section id="popup-info" class="next-popup box red-shadow">
+        <h2 class="box-header">arebyte Plugin</h2>
+        <div class="body-content" id="about-text">
+            <?= $site->extAbout();?>
+        </div>
+    </section>
+    <section id="popup-info" class="next-popup box red-shadow">
+        <h2 class="box-header">Credits</h2>
+        <p class="popup-title">arebyte Plugin v2.0</p>
+        <p class="credit-details">Developed by <a href="https://www.arebyte.com/" target="_Blank">arebyte</a>, 2021</p>
+        <p class="credit-details">
+        Plugin Design and Development: <br><a href="http://rob.prou.se" targe="_Blank">Rob Prouse</a> &  <a href="https://www.tommerrell.com" target="_Blank">Tom Merrell</a>
+        </p>
+        <p class="credit-details">All rights reserved to arebyte 2021</p>
+    </section>
+    </div>
+</div>
+<?php snippet('footer'); ?>

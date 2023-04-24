@@ -4,29 +4,33 @@ icon: open
 
 options:
   url: false
+  
+status:
+  draft:
+    label: Unmoderated
+    text: This popup set has not been moderated yet.
+  unlisted:
+    label: Live
+    text: This popup set has been moderated and accepted.
 
 fields:
     fromto:
         extends: fields/fromto
         label: From/To
+    popupSetTitle:
+        label: "Title for popup group"
+        type: text
     popupSetText:
-        label: "Text for popup group:"
-        type: textarea
-        buttons: false
+        label: "Info for popup group:"
+        type: writer
     popups:
         extends: fields/popups
         label: Popups
     info: 
         label: Info
         type: info
-        text: "instructions {{page.dateError.value}} = {{ page.invalidDate }}"          
-    dateError:
-      type: hidden
-      default: 'true'
-    dateErrorText: 
-        label: Invalid popup date(s)
-        type: info
-        text: "{{ page.invalidDate }}"
-        when:
-            dateError: "{{page.dateError.value}}"
-
+        text: "The title and info for the 'Popup group' relate to all the popups, to add an individual popup click the '+' button.\n\n To decorate text and add links in the info sections simply highlight the text"
+    emailed:
+        type: text
+        disabled: true
+        default: 'false'

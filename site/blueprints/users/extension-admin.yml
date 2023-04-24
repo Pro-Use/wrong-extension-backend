@@ -47,3 +47,5 @@ permissions:
     create: true
     delete: true
     update: true
+
+fields:

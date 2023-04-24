@@ -1,13 +1,31 @@
 
 label: Popups
 type: structure
-fields:
-  popup-text:
-    label: "Popup text"
-    type: textarea
-    buttons: false
+columns:
+  popup_title:
+    width: 1/6
   url:
-    label: Content
+    width: 2/6
+  time:
+    width: 1/6
+  date:
+    width: 2/6
+fields:
+  info: 
+      label: Info
+      type: info
+      text: "Title and text relate to this individual popup, the popup can be fullscreen or the size of the popup is set in pixels and the screen position can be one of 9 options. Time is the time of day the popup appears and date chooses specific day(s) within dates of this popup set to show the popup - leave blank for every day"
+  popup_title:
+    label: "Popup title"
+    type: text
+    required: true
+  popup_text:
+    label: "Popup info"
+    type: writer
+    buttons: false
+    required: true
+  url:
+    label: Url
     type: url
     width: 1/7
     required: true
@@ -18,18 +36,21 @@ fields:
   width:
     label: Popup width
     type: number
+    required: true
     width: 1/7
     when:
         fullscreen: false
   height:
     label: Popup height
     type: number
+    required: true
     width: 1/7
     when:
         fullscreen: false
   position:
     label: Popup position
     type: select
+    required: true
     options:
         top-left: Top left
         top-center: Top center
@@ -47,15 +68,14 @@ fields:
       label: Popup time
       type: time
       required: true
+      step:
+        unit: minute
+        size: 1
       width: 1/7
   date:
       label: Popup date (leave blank for every day)
-      type: date
-      required: false
+      type: multiselect
+      options: query
+      query: page.returnDates
       width: 1/7
-      help: "Must be a date between {{ page.from.toDate('Y-m-d') }} and {{ page.to.toDate('Y-m-d') }}"
-  info: 
-      label: Info
-      type: info
-      text: "Instructions"
-      
+      # help: "Must be a date between {{ page.from.toDate('Y-m-d') }} and {{ page.to.toDate('Y-m-d') }}"
