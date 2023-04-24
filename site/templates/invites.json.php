@@ -50,7 +50,7 @@ foreach($data as $article) {
   if ($now < $to){
       
     $popups = $article->popups()->toStructure();
-    $popup_json = [];
+    // $popup_json = [];
 
     foreach($popups as $popup) {
         $now = new DateTime($now_string, new DateTimeZone('Europe/London'));
