@@ -68,8 +68,9 @@ fields:
       label: Popup time
       type: time
       required: true
+      display: HH:mm:ss
       step:
-        unit: minute
+        unit: second
         size: 1
       width: 1/7
   date:
