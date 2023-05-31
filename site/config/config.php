@@ -61,8 +61,8 @@ return [
               $from = new DateTime($set->from(), new DateTimeZone('Europe/London'));
               $to = new DateTime($set->to(), new DateTimeZone('Europe/London'));
               $set_info = [
-                'from' => (string)$from,
-                'to' => (string)$to,
+                'from' => (string)$from->format('Y-m-d'),
+                'to' => (string)$to->format('Y-m-d'),
                 'curator' => (string)$set->title(),
                 'title' => (string)$set->popupSetTitle(),
                 'text' => (string)$set->popupSetText()
@@ -97,7 +97,8 @@ return [
           }
         ]
       ];
-  },          
+
+  },
 //  Restrict Access
   'sylvainjule.bouncer.list' => [
      'curator' => [
