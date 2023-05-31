@@ -51,7 +51,7 @@ return [
         [
           'pattern' => 'archive.json',
           'action'  => function () {
-            $page = $kirby()->page('invites');
+            $page = kirby()->page('invites');
             $data = $page->children()
               ->filter(function ($child) {
               return $child->status() != 'draft';
