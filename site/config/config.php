@@ -103,7 +103,7 @@ return [
                 $all_sets[] = $set_info;
               }
             }
-          echo $all_sets;
+          echo json_encode($all_sets);
           }
         ]
       ];
