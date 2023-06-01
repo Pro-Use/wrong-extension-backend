@@ -23,6 +23,12 @@ fields:
     popupSetText:
         label: "Info for popup group:"
         type: writer
+    archiveImage:
+        label: "Cover image for popup group on the archive page (landscape)"
+        type: files
+        multiple: false
+        layout: cards
+        uploads: archive-image
     popups:
         extends: fields/popups
         label: Popups

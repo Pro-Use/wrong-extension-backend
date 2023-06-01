@@ -1,0 +1,4 @@
+accept:
+    mime: image/*
+    type: image
+    orientation: landscape
