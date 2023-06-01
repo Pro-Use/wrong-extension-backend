@@ -51,6 +51,7 @@ return [
         [
           'pattern' => 'archive.json',
           'action'  => function () {
+            header("Access-Control-Allow-Origin: *");
             $page = kirby()->page('invites');
             $data = $page->children()
               ->filter(function ($child) {
@@ -102,7 +103,7 @@ return [
                 $all_sets[] = $set_info;
               }
             }
-          return $all_sets;
+          echo $all_sets;
           }
         ]
       ];
