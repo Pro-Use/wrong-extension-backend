@@ -2,9 +2,7 @@
 <div class="container info">
     <div class="main">
 <?php
-    if ($kirby->user()) {
-        snippet('popup_preview');  
-    } 
+     
 ?>
 <?php 
     $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING);
@@ -29,7 +27,13 @@
                 <?=$page->popupSetText()->kt();?>
             </div>
         </section>
-    <?php } } } ?>
+    <?php } 
+        } 
+    } else if ($kirby->user()) {
+        snippet('popup_preview');  
+    }
+
+    ?>
     </div>
     <footer class="fade">
         <div class="contact-link-container">
