@@ -16,4 +16,8 @@ fields:
       label: Launch date
       type: date
       required: true
+    to:
+      label: To (for reference purposes, no longer used)
+      type: date
+      disabled: true
 
