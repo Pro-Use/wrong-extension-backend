@@ -1,0 +1,10 @@
+fields:
+  live_project_page:
+    label: Live Project
+    type: pages
+    multiple: false
+    query: site.find('invites')
+    width: 1/3
+    text: "{{ page.title }}"
+    info: "Launching: {{ page.from.toDate('d/m/Y') }}"
+
