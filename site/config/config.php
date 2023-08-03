@@ -53,55 +53,45 @@ return [
           'action'  => function () {
             header("Access-Control-Allow-Origin: *");
             $page = kirby()->page('invites');
-            $data = $page->children()
-              ->filter(function ($child) {
-              return $child->status() != 'draft';
-            });
+            $data = kirby()->site()->archive()->toPages();
             $all_sets = [];
-            $now = new DateTime("now", new DateTimeZone('Europe/London'));
             foreach($data as $set) {
               $from = new DateTime($set->from(), new DateTimeZone('Europe/London'));
-              $to = new DateTime($set->to(), new DateTimeZone('Europe/London'));
-              if ($now > $to){
-                if ($set->archiveImage()->isNotEmpty()){
-                  $archiveImage = $set->archiveImage()->toFile()->srcset([350, 700]);
-                } else {
-                  $archiveImage = false;
-                }
-                $set_info = [
-                  'from' => (string)$from->format('Y-m-d'),
-                  'to' => (string)$to->format('Y-m-d'),
-                  'curator' => (string)$set->title(),
-                  'title' => (string)$set->popupSetTitle(),
-                  'text' => (string)$set->popupSetText(),
-                  'img' => $archiveImage,
-                ];
-                $popups = $set->popups()->toStructure();
-                $popups_json = [];
-                foreach($popups as $popup) {
-                  $dates = explode(", ", $popup->date());
-                  sort($dates);
-                  if($dates[0] == ''){
-                    $dates = [$from->format('Y-m-d')];
-                  }
-                  $id = base64_encode($popup->url());
-                  $popups_json[] = [
-                    'popup_title' => (string)$popup->popup_title(),
-                    'popup_info' => (string)$popup->popup_text(), 
-                    'id' => (string)$id,
-                    'url' => (string)$popup->url(),
-                    'info_url' => (string)$set->url()."?id=".$id,
-                    'fullscreen' => (string)$popup->fullscreen(),
-                    'width' => (string)$popup->width(),
-                    'height' => (string)$popup->height(),
-                    'position' => (string)$popup->position(),
-                    'popup_date' => $dates[0],
-                    'popup_time' => (string)$popup->time(),
-                  ];
-                }
-                $set_info['popups'] = $popups_json;
-                $all_sets[] = $set_info;
+              if ($set->archiveImage()->isNotEmpty()){
+                $archiveImage = $set->archiveImage()->toFile()->srcset([350, 700]);
+              } else {
+                $archiveImage = false;
               }
+              $set_info = [
+                'from' => (string)$from->format('d-m-Y'),
+                'curator' => (string)$set->title(),
+                'title' => (string)$set->popupSetTitle(),
+                'text' => (string)$set->popupSetText(),
+                'project' => (string)$set->slug(),
+                'img' => $archiveImage,
+              ];
+              $popups = $set->popups()->toStructure();
+              $popups_json = [];
+              foreach($popups as $popup) {
+                $dates = explode(", ", $popup->date());
+                $id = base64_encode($popup->url());
+                $popups_json[] = [
+                  'popup_title' => (string)$popup->popup_title(),
+                  'popup_info' => (string)$popup->popup_text(), 
+                  'id' => (string)$id,
+                  'url' => (string)$popup->url(),
+                  'info_url' => (string)$set->url()."?id=".$id,
+                  'fullscreen' => (string)$popup->fullscreen(),
+                  'width' => (string)$popup->width(),
+                  'height' => (string)$popup->height(),
+                  'position' => (string)$popup->position(),
+                  'popup_day' => (string)$popup->day(),
+                  'popup_time' => (string)$popup->time(),
+                ];
+              }
+              $set_info['popups'] = $popups_json;
+              $all_sets[] = $set_info;
+              
             }
           echo json_encode($all_sets);
           }
