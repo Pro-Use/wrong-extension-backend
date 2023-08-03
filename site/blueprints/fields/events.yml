@@ -1,0 +1,78 @@
+
+label: Events
+type: structure
+columns:
+  popup_title:
+    width: 1/6
+  url:
+    width: 2/6
+  time:
+    width: 1/6
+  date:
+    width: 2/6
+fields:
+  info: 
+      label: Info
+      type: info
+      text: "Title and text relate to this individual event popup, the popup can be fullscreen or the size of the popup is set in pixels and the screen position can be one of 9 options. Time is the time of day the popup appears and date chooses specific day(s) within dates of this popup set to show the popup - leave blank for every day"
+  popup_title:
+    label: "Event popup title"
+    type: text
+    required: true
+  popup_text:
+    label: "Event popup info"
+    type: writer
+    buttons: false
+    required: true
+  url:
+    label: Url
+    type: url
+    width: 1/7
+    required: true
+  fullscreen:
+    label: Fullscreen
+    type: toggle
+    width: 1/7
+  width:
+    label: Event popup width
+    type: number
+    required: true
+    width: 1/7
+    when:
+        fullscreen: false
+  height:
+    label: Event popup height
+    type: number
+    required: true
+    width: 1/7
+    when:
+        fullscreen: false
+  position:
+    label: Event popup position
+    type: select
+    required: true
+    options:
+        top-left: Top left
+        top-center: Top center
+        top-right: Top Right
+        mid-left: Center left
+        mid-center: Center
+        mid-right: Center Right
+        bottom-left: Bottom left
+        bottom-center: Bottom center
+        bottom-right: Bottom Right      
+    width: 1/7
+    when:
+        fullscreen: false
+  date:
+      extends: fields/event_date
+  time:
+      label: Time to launch this event popup
+      type: time
+      required: true
+      display: HH:mm:ss
+      step:
+        unit: second
+        size: 1
+      width: 1/7
+  
