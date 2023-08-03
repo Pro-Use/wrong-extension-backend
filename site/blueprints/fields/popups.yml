@@ -3,13 +3,13 @@ label: Popups
 type: structure
 columns:
   popup_title:
-    width: 1/6
+    width: 2/6
   url:
     width: 2/6
   time:
     width: 1/6
-  date:
-    width: 2/6
+  day:
+    width: 1/6
 fields:
   info: 
       label: Info
@@ -64,8 +64,10 @@ fields:
     width: 1/7
     when:
         fullscreen: false
+  day:
+      extends: fields/day
   time:
-      label: Popup time
+      label: Time to launch this popup
       type: time
       required: true
       display: HH:mm:ss
@@ -73,10 +75,8 @@ fields:
         unit: second
         size: 1
       width: 1/7
-  date:
-      label: Popup date (leave blank for every day)
-      type: multiselect
-      options: query
-      query: page.returnDates
-      width: 1/7
-      # help: "Must be a date between {{ page.from.toDate('Y-m-d') }} and {{ page.to.toDate('Y-m-d') }}"
+  archivable:
+    label: Popup shown in archive?
+    type: toggle
+    default: true
+  
