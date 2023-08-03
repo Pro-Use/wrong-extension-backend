@@ -32,6 +32,9 @@ fields:
     popups:
         extends: fields/popups
         label: Popups
+    events:
+        extends: fields/events
+        label: Events
     info: 
         label: Info
         type: info
