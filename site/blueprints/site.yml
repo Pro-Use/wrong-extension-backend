@@ -8,20 +8,22 @@ options:
   delete: false
 tabs:
   invites:
-    label: Invites 
+    label: Projects 
     sections:
+      fields:
+        extends: fields/live_project
+      info:
+        type: info
+        label: "Instructions"
+        text: "To invite a new contibutor, use the '+' symbol to add a new user, using the curator/institution name as the title. In the new popup set page, add their email address, start and end dates - the user will be automatically emailed with login details and can start filling in details and adding plugins. \n \n To moderate submitted plugins, click on an unmoderated popup set and use the 'open' link to test out the popups. If the popups are ok, change the status from 'Unmoderated' to 'live'"
       drafts:
         extends: sections/invites
-        headline: Unmoderated popup sets
+        headline: Unmoderated Projects
         status: drafts
-
       unlisted:
         extends: sections/invites
-        headline: Live popup sets
+        headline: Moderated Projects
         status: unlisted
-
-      fields:
-        extends: fields/main_instructions
           
   extension:
     label: Extension
@@ -31,4 +33,18 @@ tabs:
         fields:
           extAbout:
             label: Extension - 'About' Text
-            type: writer 
+            type: writer
+
+  archive:
+    label: Archive
+    sections:
+      archive:
+        type: fields
+        fields:
+          archive:
+            label: Archived Projects
+            type: pages
+            multiple: true
+            query: site.find('invites')
+            text: "{{ page.title }}"
+            info: "Launched: {{ page.from.toDate('d/m/Y') }} "
