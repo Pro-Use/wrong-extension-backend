@@ -1,13 +1,8 @@
 type: group
 label: dates
 fields:
-    from:
-      label: Start
-      type: date
-      width: 1/2
-      disabled: true
-    to:
-      label: End
-      type: date
+    days:
+      label: Number of days this project will run
+      type: number
       width: 1/2
       disabled: true
