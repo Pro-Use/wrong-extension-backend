@@ -9,7 +9,7 @@ $data = $page->children()
 $now = new DateTime("now", new DateTimeZone('Europe/London'));
 $now_string = $now->format('Y-m-d');
 $popups_json = [];
-$next_popup_json = [];
+$next_popup_json = null;
 $slug = null;
 $days = null;
 
