@@ -52,6 +52,10 @@ return [
           'pattern' => 'archive.json',
           'action'  => function () {
             header("Access-Control-Allow-Origin: *");
+            $live_project = kirby()->site()->live_project_page()->toPage();
+            if ($live_project){
+              $live_project = $live_project->slug();
+            }
             $page = kirby()->page('invites');
             $data = kirby()->site()->archive()->toPages();
             $all_sets = [];
@@ -64,6 +68,7 @@ return [
                   $archiveImage = false;
                 }
                 $set_info = [
+                  'live' => $set->slug() == $live_project,
                   'from' => (string)$from->format('d-m-Y'),
                   'days' => $set->days()->toInt(),
                   'curator' => (string)$set->title(),
