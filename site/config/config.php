@@ -52,13 +52,16 @@ return [
           'pattern' => 'archive.json',
           'action'  => function () {
             header("Access-Control-Allow-Origin: *");
-            $live_project = kirby()->site()->live_project_page()->toPage();
-            if ($live_project){
-              $live_project = $live_project->slug();
-            }
             $page = kirby()->page('invites');
             $data = kirby()->site()->archive()->toPages();
             $all_sets = [];
+            $live_project = kirby()->site()->live_project_page()->toPage();
+            if ($live_project){
+              if(! $data->has($live_project->id())){
+                $data->add($live_project);
+              }
+              $live_project = $live_project->slug();
+            }
             foreach($data as $set) {
               if ($set->days()->isNotEmpty()){
                 $from = new DateTime($set->from(), new DateTimeZone('Europe/London'));
