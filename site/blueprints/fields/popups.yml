@@ -66,6 +66,10 @@ fields:
         fullscreen: false
   day:
       extends: fields/day
+  date:
+    label: 'Date (for reference only)'
+    type: date
+    disabled: true
   time:
       label: Time to launch this popup
       type: time
