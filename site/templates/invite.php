@@ -39,11 +39,11 @@
         <div class="contact-link-container">
             <a class="link-item" href="mailto:hello@arebyte.com">Contact</a>
         </div>
-        <div class="wrong-footer">
+<!--         <div class="wrong-footer">
             <a href="https://thewrong.org/" title="The Wrong biennale" target="_Blank">
             <img class="wrong-logo" alt="The Wrong Biennale" src="<?= $site->url();?>/assets/img/tw5_logo-B.png" width="90px" height="auto"/>
             </a>
-        </div>
+        </div> -->
     </footer>
 </div>
 
