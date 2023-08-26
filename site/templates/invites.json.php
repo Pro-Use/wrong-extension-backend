@@ -113,6 +113,35 @@ if($article != null && $article->days()->isNotEmpty()) {
 
         }
     }
+  } else {
+    // If live project hasn't launched yet, show next popup
+    $popups = $article->popups()->toStructure();
+    $sorted_popups = $popups->sortBy('day', 'asc', 'time', 'asc');
+    $popup = $sorted_popups->first();
+    // $diff = date_diff($now, $from, true);
+    // $interval = $diff->days();
+    $id = base64_encode($popup->url());
+    $popup_date = clone $now;
+    $days_ahead = $popup->day()->toInt() - $day;
+    $popup_date->modify(sprintf("%u day",$days_ahead));
+    $next_popup_diff = (int)$now->diff($popup_date)->format('%a');
+    $next_popup_json = [
+        'curator' => (string)$article->title(),
+        'title' => (string)$article->popupSetTitle(),
+        'popup_title' => (string)$popup->popup_title(),
+        'popup_info' => (string)$popup->popup_text(), 
+        'id' => (string)$id,
+        'url' => (string)$popup->url(),
+        'info_url' => (string)$article->url()."?id=".$id,
+        'fullscreen' => (string)$popup->fullscreen(),
+        'width' => (string)$popup->width(),
+        'height' => (string)$popup->height(),
+        'position' => (string)$popup->position(),
+        'time' => (string)$popup->time(),
+        'day' => $popup->day()->toInt(),
+        'diff' => $next_popup_diff
+    ];
+
   }
 }
 
