@@ -118,13 +118,19 @@ if($article != null && $article->days()->isNotEmpty()) {
     $popups = $article->popups()->toStructure();
     $sorted_popups = $popups->sortBy('day', 'asc', 'time', 'asc');
     $popup = $sorted_popups->first();
-    // $diff = date_diff($now, $from, true);
-    // $interval = $diff->days();
+    $diff = date_diff($now, $from, true);
+    $next_popup_diff = (int)$diff->format('%a');
     $id = base64_encode($popup->url());
     $popup_date = clone $now;
     $days_ahead = $popup->day()->toInt() - $day;
     $popup_date->modify(sprintf("%u day",$days_ahead));
-    $next_popup_diff = (int)$now->diff($popup_date)->format('%a');
+    if ($next_popup_diff == 0){
+        $from_hour = (int)$from->format('H');
+        $now_hour = (int)$now->format('H');
+        if ($from_hour < $now_hour){
+            $next_popup_diff += 1;
+        }
+    }
     $next_popup_json = [
         'curator' => (string)$article->title(),
         'title' => (string)$article->popupSetTitle(),
