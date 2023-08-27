@@ -126,11 +126,7 @@ if($article != null && $article->days()->isNotEmpty()) {
     $days_ahead = $popup->day()->toInt() - $day;
     $popup_date->modify(sprintf("%u day",$days_ahead));
     if ($next_popup_diff == 0){
-        $from_hour = (int)$from->format('H');
-        $now_hour = (int)$now->format('H');
-        if ($from_hour < $now_hour){
-            $next_popup_diff += 1;
-        }
+        $next_popup_diff += 1;
     }
     $next_popup_json = [
         'curator' => (string)$article->title(),
