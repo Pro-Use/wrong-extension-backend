@@ -66,7 +66,7 @@ return [
               if ($set->days()->isNotEmpty()){
                 $from = new DateTime($set->from(), new DateTimeZone('Europe/London'));
                 if ($set->archiveImage()->isNotEmpty()){
-                  $archiveImage = $set->archiveImage()->toFile()->srcset([350, 700]);
+                  $archiveImage = $set->archiveImage()->toFile()->srcset([700]);
                 } else {
                   $archiveImage = false;
                 }
