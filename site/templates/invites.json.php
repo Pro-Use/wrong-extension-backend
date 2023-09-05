@@ -30,6 +30,17 @@ if ($_GET['day'] ?? null){
     $day = 1;
 }
 
+if ($_GET['tz'] ?? null){
+    $local_offset = intval($_GET['tz']);
+} else {
+    $local_offset = -60;
+}
+
+
+$utcNow = new DateTime('now', (new DateTimeZone('UTC')));
+$TimeZone = new DateTimeZone('Europe/London');
+$tz_offset = ($TimeZone->getOffset($utcNow) / 60) + $local_offset;
+
 if($article != null && $article->days()->isNotEmpty()) {
   $slug = (string)$article->slug();
   $days = $article->days()->toInt();
@@ -46,6 +57,10 @@ if($article != null && $article->days()->isNotEmpty()) {
         // Check if event is today and add!
         if ($event_day == $now_string) {
             $id = base64_encode($event->url());
+            // Do timezone offset...
+            $event_time = new DateTime();
+            $tz_offset_s = $tz_offset * 60;
+            $event_time->setTimestamp($event->time()->toDate() + $tz_offset_s);
             $popups_json[] = [
                 'project' => (string)$article->slug(),
                 'curator' => (string)$article->title(),
@@ -59,7 +74,7 @@ if($article != null && $article->days()->isNotEmpty()) {
                 'width' => (string)$event->width(),
                 'height' => (string)$event->height(),
                 'position' => (string)$event->position(),
-                'time' => (string)$event->time(),
+                'time' => (string)$event_time->format('H:i:s'),
             ]; 
         }
     }
@@ -85,6 +100,7 @@ if($article != null && $article->days()->isNotEmpty()) {
                 'position' => (string)$popup->position(),
                 'time' => (string)$popup->time(),
                 'day' => $popup->day()->toInt(),
+                'offset' => $tz_offset,
             ];
         // get first popup from next day
         } elseif ($popup->day()->toInt() > $day) {
